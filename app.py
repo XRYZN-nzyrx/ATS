@@ -12,7 +12,7 @@ import google.generativeai as genai
 #  Gemini AI setup
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# 🧠 Generate AI Response
+#  Generate AI Response
 def get_gemini_response(input_text, pdf_content, prompt):
     try:
         model = genai.GenerativeModel("gemini-1.5-flash")
@@ -54,7 +54,7 @@ uploaded_file = st.file_uploader("📄 Upload Resume (PDF only)", type=["pdf"])
 if uploaded_file:
     st.success("Resume uploaded ✅")
 
-# 🔘 Buttons
+#  Buttons
 submit1 = st.button("🧠 Expert Resume Evaluation")
 submit2 = st.button("📈 Skill Improvement Suggestions")
 submit3 = st.button("📊 ATS Match Percentage")
